@@ -15,7 +15,7 @@ Each example prints its usage to the terminal. The robot and the climbing wall c
 
 ## What the examples show
 
-As you move the hand/pelvis/foot targets around, the examples draw the **static-equilibrium polygon** of these contacts at the height of the center of mass (CoM)[^1]: the region, seen from above, where the CoM must be for the contacts to hold the robot still, without any contact exceeding a maximum force. The polygon is green when the CoM is inside it, and turns red when the CoM is outside, denoting a configuration that the robot cannot sustain.
+As you move the hand/pelvis/foot targets around, the examples draw the **static-equilibrium polygon** of these contacts at the height[^1] of the center of mass (CoM). It is the region, seen from above, where the CoM must be in order for the contacts to hold the robot still, without any contact exceeding its maximum force. The polygon is green when the CoM is inside it, and turns red when the CoM leaves it, denoting a configuration that the robot cannot sustain.
 
 The Pinker example also shows contact forces. In general, there are many contact forces that can sustain the robot when the CoM is inside the static-equilibrium polygon: here we just pick those of minimum norm. This tells you which limb carries the most load, and which one would give up first as the CoM gets closer to the edge of the polygon.
 
