@@ -42,7 +42,7 @@ Move the translucent green spheres, targets of the hands, feet and pelvis:
 - Rotate it: Ctrl + left drag.
 
 The pelvis target is inside the trunk, at hip height. If a target is hidden
-inside the robot, press 1 to hide meshes, select the target, then press 1.
+inside the robot, press 2 to hide meshes, select the target, then press 2.
 
 Press 6 and 7 to disable or enable the left and right hands, 8 and 9 for the
 left and right feet. A disabled limb has a grey target, no task, and no
