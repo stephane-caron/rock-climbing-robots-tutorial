@@ -1,3 +1,24 @@
-# rock-climbing-robots-tutorial
+## Static balance for climbing robots
 
-Tutorial for the 2026 Rock Climbing Robots Workshop in Bordeaux
+Code for the [Rock Climbing Robots Workshop](https://rock-climbing-robots.github.io/), 29 October – 1 November 2026, Bordeaux, France.
+
+## Usage
+
+You can run the scripts with [uv](https://docs.astral.sh/uv/). From the root of this repository:
+
+```console
+uv run microban_mink.py          # in MuJoCo's viewer
+uv run microban_pinker.py        # in a Web browser
+```
+
+Each example prints its usage to the terminal. The robot and the climbing wall come from the hackathon's [simulator](https://github.com/rock-climbing-robots/simulator).
+
+## What the examples show
+
+As you move the hand/pelvis/foot targets around, the examples draw the **static-equilibrium polygon** of these contacts at the height of the center of mass (CoM)\*: the region, seen from above, where the CoM must be for the contacts to hold the robot still, without any contact exceeding a maximum force. The polygon is green when the CoM is inside it, and turns red when the CoM is outside, denoting a configuratin that the robot cannot sustain.
+
+The Pinker example also shows contact forces. In general, there are many contact forces that can sustain the robot when the CoM is inside the static-equilibrium polygon: here we just pick those of minimum norm. This tells you which limb carries the most load, and which one would give up first as the CoM gets closer to the edge of the polygon.
+
+**Extra insight:** the closer the CoM is to an edge of the support polygon, the larger the maximum force is on one of the contacts. When the CoM is on the edge, there is always at least one force hitting the maximum.
+
+<small>\* The full zone is a vertical cylinder in which the CoM can be anywhere. We draw it as a polygon for convenience.</small>

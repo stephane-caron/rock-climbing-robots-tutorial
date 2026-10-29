@@ -1,0 +1,26 @@
+[project]
+name = "rock-climbing-robots-tutorial"
+version = "1.0.0"
+description = "Contact-stability tutorial at the Rock Climbing Robots Workshop 2026"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "static_balance",
+    "climbing-sim",
+    "loop-rate-limiters",
+    "microban-sim",
+    "mink",
+    "pinker",
+    "trimesh",
+    "viser",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+static_balance = { path = "static_balance", editable = true }
+climbing-sim = { git = "https://github.com/rock-climbing-robots/simulator", rev = "6c180ff25013d73e1b4ffc0db41a5509652652b7" }
+microban-model = { git = "https://github.com/Rhoban/microban_model", rev = "8e42ef70673b5747dbdca3efaf60bc0f8ec7ea6d", lfs = true }
+microban-sim = { git = "https://github.com/Rhoban/microban_sim", rev = "29234e369e33411ff42276096c6c6af208ad3b65" }
+pinker = { git = "https://github.com/pink-kinematics/pinker", rev = "28610a7523543343922306139850c7912fccb6a1" }
