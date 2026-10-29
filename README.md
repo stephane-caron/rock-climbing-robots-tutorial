@@ -1,4 +1,4 @@
-## Static balance for climbing robots
+# Static balance for climbing robots
 
 Code for the [Rock Climbing Robots Workshop](https://rock-climbing-robots.github.io/), 29 October – 1 November 2026, Bordeaux, France.
 
