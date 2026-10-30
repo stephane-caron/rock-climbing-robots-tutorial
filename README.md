@@ -13,9 +13,11 @@ uv run microban_pinker.py        # in a Web browser
 
 Each example prints its usage to the terminal. The robot and the climbing wall come from the hackathon's [simulator](https://github.com/rock-climbing-robots/simulator).
 
-## What the examples show
+## Support polygon
 
-As you move the hand/pelvis/foot targets around, the examples draw the **static-equilibrium polygon** of these contacts at the height[^1] of the center of mass (CoM). It is the region, seen from above, where the CoM must be in order for the contacts to hold the robot still, without any contact exceeding its maximum force. The polygon is green when the CoM is inside it, and turns red when the CoM leaves it, denoting a configuration that the robot cannot sustain.
+As you move the hand/pelvis/foot targets around, the examples draw the **static-equilibrium polygon** of these contacts at the height of the center of mass (CoM).[^1] It is the region, seen from above, where the CoM must be in order for the contacts to hold the robot still, without any contact exceeding its maximum force. The polygon is green when the CoM is inside it, and turns red when the CoM leaves it, denoting a configuration that the robot cannot sustain.
+
+![](https://github.com/user-attachments/assets/e89c348c-7440-463e-8a28-50ee36f190e4)
 
 The Pinker example also shows contact forces. In general, there are many contact forces that can sustain the robot when the CoM is inside the static-equilibrium polygon: here we just pick those of minimum norm. This tells you which limb carries the most load, and which one would give up first as the CoM gets closer to the edge of the polygon.
 
