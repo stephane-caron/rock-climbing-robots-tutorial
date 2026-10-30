@@ -23,4 +23,18 @@ The Pinker example also shows contact forces. In general, there are many contact
 
 **Extra insight:** the closer the CoM is to an edge of the support polygon, the larger the maximum force is on one of the contacts. When the CoM is on the edge, there is always at least one force hitting the maximum.
 
-[^1]: The full zone is a vertical cylinder in which the CoM can be anywhere. We draw it as a polygon for convenience.
+[^1]: The full zone is actually a vertical cylinder in which the CoM can be anywhere. We draw it as a polygon for convenience.
+
+## To go further
+
+Ideas:
+
+- [Testing static equilibrium for legged robots](https://lall.stanford.edu/papers/bretl_eqmcut_ieee_tro_projection_2008_08_01_01/pubdata/entry.pdf) by Bretl and Lall (2008) introduced the iterative polytope projection algorithm we use here.
+- [Contact stability](https://scaron.info/robotics/contact-stability.html) is the more general condition to check that a robot motion is *feasible* while maintaining contacts. It gives rise to various conditions in statics and dynamics.
+
+Software:
+
+- [mink](https://github.com/kevinzakka/mink): differential inverse kinematics in Python, based on the MuJoCo physics engine.
+- [pinker](https://github.com/pink-kinematics/pinker): differential inverse kinematics in Python, lightweight for embedded robots.
+- [pypoman](https://github.com/stephane-caron/pypoman): polyhedral projection functions we use to compute the CoM support polygon.
+- [StabiliPy](https://github.com/haudren/stabilipy): a Python package implementing a more general recursive method for polytope projection.
