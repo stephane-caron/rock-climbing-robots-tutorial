@@ -11,7 +11,7 @@ uv run microban_mink.py          # in MuJoCo's viewer
 uv run microban_pinker.py        # in a Web browser
 ```
 
-Each example prints its usage to the terminal. The robot and the climbing wall come from the hackathon's [simulator](https://github.com/rock-climbing-robots/simulator).
+Each example prints its usage to the terminal and tracks end-effector targets by differential inverse kinematics. The robot and the initial climbing posture come from the hackathon's [simulator](https://github.com/rock-climbing-robots/simulator).
 
 ## Support polygon
 
