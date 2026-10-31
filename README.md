@@ -23,7 +23,7 @@ The Pinker example also shows contact forces. In general, there are many contact
 
 **Extra insight:** the closer the CoM is to an edge of the support polygon, the larger the maximum force is on one of the contacts. When the CoM is on the edge, there is always at least one force hitting the maximum.
 
-[^1]: The full zone is actually a vertical cylinder in which the CoM can be anywhere. We draw it as a polygon for convenience.
+[^1]: The full zone is actually a vertical prism in which the CoM can be anywhere. We only draw the base polygon for convenience.
 
 ## To go further
 
