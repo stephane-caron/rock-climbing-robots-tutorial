@@ -27,14 +27,4 @@ The Pinker example also shows contact forces. In general, there are many contact
 
 ## To go further
 
-Ideas:
-
-- [Testing static equilibrium for legged robots](https://lall.stanford.edu/papers/bretl_eqmcut_ieee_tro_projection_2008_08_01_01/pubdata/entry.pdf) by Bretl and Lall (2008) introduced the iterative polytope projection algorithm we use here.
-- [Contact stability](https://scaron.info/robotics/contact-stability.html) is the more general condition to check that a robot motion is *feasible* while maintaining contacts. It gives rise to various conditions in statics and dynamics.
-
-Software:
-
-- [mink](https://github.com/kevinzakka/mink): differential inverse kinematics in Python, based on the MuJoCo physics engine.
-- [pinker](https://github.com/pink-kinematics/pinker): differential inverse kinematics in Python, lightweight for embedded robots.
-- [pypoman](https://github.com/stephane-caron/pypoman): polyhedral projection functions we use to compute the CoM support polygon.
-- [StabiliPy](https://github.com/haudren/stabilipy): a Python package implementing a more general recursive method for polytope projection.
+The iterative polytope projection algorithm we use to compute the support areas was proposed by Bretl and Lall in [Testing static equilibrium for legged robots](https://lall.stanford.edu/papers/bretl_eqmcut_ieee_tro_projection_2008_08_01_01/pubdata/entry.pdf) (2008). More generally, checking that a robot motion is *feasible* while maintaining contacts is called [contact stability](https://scaron.info/robotics/contact-stability.html), and gives rise to various support polygons and polytopes in statics and dynamics.
